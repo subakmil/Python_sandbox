@@ -31,7 +31,7 @@ resources = {
 }
 
 # General setup
-continue_code = True
+play_game = True
 list_of_options = ["espresso", "latte", "cappuccino", "off", "report"]
 
 # TODO1: User requirements (espresso/latte/cappuccino)
@@ -53,6 +53,7 @@ def selection():
             return loop_choice
 
 
-choice = selection()
-if choice != "off":
-    print({choice})
+while play_game:
+    choice = selection()
+    if choice == "off":
+        play_game = False
