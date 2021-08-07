@@ -48,12 +48,12 @@ while game_should_continue:
 
     a_follower_count = account_a["follower_count"]
     b_follower_count = account_b["follower_count"]
-    is_correct = check_answer(guess, a_follower_count, b_follower_count)
+    good = check_answer(guess, a_follower_count, b_follower_count)
 
     os.system("cls")
     print(logo)
 
-    if is_correct:
+    if good:
         score += 1
         print(f"You're right! Current score: {score}")
     else:
